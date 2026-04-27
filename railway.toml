@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+
+[build.env]
+NIXPACKS_NODE_VERSION = "20"
+
+[deploy]
+startCommand = "npx serve -s dist -p $PORT"
+healthcheckPath = "/"
+restartPolicyType = "on_failure"
